@@ -10,7 +10,7 @@ const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    const singUp = (email, password) =>{
+    const signUp = (email, password) =>{
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
@@ -50,7 +50,7 @@ const AuthProvider = ({children}) => {
     const userInfo = {
         user,
         loading,
-        singUp,
+        signUp,
         signIn,
         singInWithGoogle,
         logOut

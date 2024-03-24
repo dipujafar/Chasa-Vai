@@ -20,7 +20,7 @@ const NavbarLink = () => {
             isPending ? "pending" : isActive ? "active" : ""
           }
         >
-         Items
+          Goods
         </NavLink>
       </li>
     </>
