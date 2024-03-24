@@ -1,10 +1,11 @@
 import Container from "../Container";
-import logo from "../../assets/image/cachiLogo.png"
+import logo from "../../assets/image/FarmerCap.png"
 import NavbarLink from "./NavbarLink";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
+    <div className="bg-black bg-opacity-40">
     <Container>
       <div className="navbar">
         <div className="navbar-start">
@@ -34,7 +35,7 @@ const Navbar = () => {
           </div>
           <Link to={'/'} className="btn btn-ghost text-xl">
             <img src={logo} alt="logo-image" className="w-12" />
-            <span className="hidden md:block text-red-600">Chashi Vai</span></Link>
+            <span className="hidden md:block text-green-100">Cashi Vai</span></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -46,6 +47,7 @@ const Navbar = () => {
         </div>
       </div>
     </Container>
+    </div>
   );
 };
 

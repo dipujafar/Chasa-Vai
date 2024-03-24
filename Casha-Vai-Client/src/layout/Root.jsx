@@ -4,9 +4,11 @@ import Navbar from "../shared/navbar/Navbar";
 
 const Root = () => {
     return (
-        <div className="bg-gradient-to-r from-green-950 via-green-700 to-green-800 text-white">
+        <div className="bg-gradient-to-r from-green-900 via-green-800 to-green-900 text-white">
             <Navbar></Navbar>
+            <div className="min-h-[calc(100vh-68px)]">
             <Outlet></Outlet>
+            </div>
         </div>
     );
 };
