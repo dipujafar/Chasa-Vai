@@ -9,11 +9,12 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import { toast } from "react-toastify";
+import googleLogo from "../../assets/image/googleLogo2.png"
 
 const LoginForm = () => {
     const [show, setShow] = useState(false);
     const [error, setError] = useState("");
-    const { signIn} = useAuth();
+    const { signIn, singInWithGoogle} = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -35,6 +36,17 @@ const LoginForm = () => {
             setError(err.message);
           });
       }
+
+      const handleGoogleSing = () => {
+        singInWithGoogle()
+          .then(() => {
+            toast.success("Successfully Login");
+            navigate(location?.state ? location?.state : "/");
+          })
+          .catch((error) => {
+            setError(error.message);
+          });
+      };
 
   return (
     <div className=" mt-2 md:w-3/4 bg-black bg-transparent bg-opacity-40  mx-auto border  rounded shadow-lg shadow-gray-300 p-5 text-white">
@@ -107,12 +119,12 @@ const LoginForm = () => {
       </form>
       <fieldset className="space-y-2 border-t mt-2">
         <legend className="text-center px-2">OR</legend>
-        {/* <button
-        //   onClick={handleGoogleSing}
+        <button
+          onClick={handleGoogleSing}
           className="flex items-center btn bg-gradient-to-r from-cyan-800 to-cyan-700 text-white w-full"
         >
           <img src={googleLogo} className="w-10" /> Login With Google
-        </button> */}
+        </button>
       </fieldset>
       <p className="mt-2">
         Do not have Account?{" "}
