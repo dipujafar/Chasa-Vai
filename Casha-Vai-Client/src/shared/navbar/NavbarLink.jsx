@@ -15,12 +15,22 @@ const NavbarLink = () => {
       </li>
       <li>
         <NavLink
-          to="/items"
+          to="/order"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
         >
-          Goods
+          Order
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/contract"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+        >
+          Contract
         </NavLink>
       </li>
     </>

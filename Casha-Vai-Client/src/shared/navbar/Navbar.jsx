@@ -1,5 +1,5 @@
 import Container from "../Container";
-import logo from "../../assets/image/FarmerCap.png"
+import logo from "../../assets/image/signUpimg2.png"
 import { FaHome } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
 import { CgLogOut } from "react-icons/cg";
@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed z-10 w-full bg-black bg-opacity-60">
+    <div className="fixed z-10 w-full bg-black bg-opacity-60 text-white">
     <Container>
       <div className="navbar">
         <div className="navbar-start">
@@ -50,14 +50,14 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52 bg-blue-700"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52 bg-gradient-to-r from-sky-800 to-sky-600"
             >
             <NavbarLink></NavbarLink>
             </ul>
           </div>
           <Link to={'/'} className="btn btn-ghost text-xl">
-            <img src={logo} alt="logo-image" className="w-10" />
-            <span className="hidden md:block text-green-100">Cashi Vai</span></Link>
+            <img src={logo} alt="logo-image" className="w-12" />
+            <span className="hidden md:block text-green-100">FarmEr</span></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

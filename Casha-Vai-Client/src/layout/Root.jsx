@@ -1,14 +1,16 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../shared/navbar/Navbar";
+import Footer from "../shared/Footer";
 
 
 const Root = () => {
     return (
-        <div className="bg-gradient-to-r from-green-900 via-green-800 to-green-900 text-white">
+        <div>
             <Navbar></Navbar>
-            <div className="min-h-[calc(100vh-68px)]">
+            <div className="min-h-screen">
             <Outlet></Outlet>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

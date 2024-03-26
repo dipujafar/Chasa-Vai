@@ -1,0 +1,22 @@
+[
+    {
+        "image": "https://i.ibb.co/Bjt2NzL/vegetable.jpg",
+        "goods": "vegetable"
+    },
+    {
+        "image": "https://i.ibb.co/HGZVDh6/fruits.jpg",
+        "name": "fruits"
+    },
+    {
+        "image": "https://i.ibb.co/QkqLGzV/online-farm-markets-cows-feeding-576-1.webp",
+        "name": "dairy"
+    },
+    {
+        "image": "https://i.ibb.co/p0TJczw/cereals.jpg",
+        "name": "cereals"
+    },
+    {
+        "image": "https://i.ibb.co/q7q6h4h/online-farm-markets-eggs-from-the-farm-576.webp",
+        "name": "egg"
+    }
+]
