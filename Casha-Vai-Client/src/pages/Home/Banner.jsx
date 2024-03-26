@@ -6,7 +6,7 @@ const Banner = () => {
             <div className='w-full h-full absolute top-0 left-0 bg-black bg-opacity-20'></div>
             <video src={bgVideo} autoPlay loop muted className='h-full w-full object-cover' ></video>
             <div className='absolute top-0 w-full h-full flex justify-center items-center '>
-                <h1 className='max-w-4xl text-center text-3xl md:text-4xl lg:text-6xl font-medium'>Buy or Sell goods From direct farm and crop field by cashi vai</h1>
+                <h1 className='max-w-4xl text-center text-3xl md:text-4xl lg:text-6xl font-medium'>Buy or Sell goods From direct farm and crop field by FarmEr</h1>
             </div>
         </div>
     );
