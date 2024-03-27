@@ -1,4 +1,5 @@
 import Banner from "./Banner";
+import BecomeFarmer from "./BecomeFarmer";
 import IotTechnology from "./IotTechnology";
 import OurGoods from "./OurGoods";
 
@@ -8,6 +9,7 @@ const Home = () => {
       <Banner></Banner>
       <OurGoods></OurGoods>
       <IotTechnology></IotTechnology>
+      <BecomeFarmer></BecomeFarmer>
     </div>
   );
 };
