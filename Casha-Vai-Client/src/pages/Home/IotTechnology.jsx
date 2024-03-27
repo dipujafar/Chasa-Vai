@@ -18,7 +18,7 @@ const IotTechnology = () => {
               src="https://i.ibb.co/xMNkwXy/image-gal-01-RETOUCH.jpg"
               className="w-full h-5/6"
             />
-            <div className="absolute -bottom-40 md:bottom-10 md:right-0 max-w-md  px-10 py-5 text-white bg-gradient-to-r from-green-700 to-green-950  md:rounded-tl-3xl lg:text-xl">
+            <div className="absolute -bottom-40 md:bottom-10 md:right-0 max-w-xl  px-10 md:px-24 py-5 text-white bg-gradient-to-r from-green-700 to-green-950  md:rounded-tl-full lg:text-xl">
               <p>
                 Specialized robots are being developed to provide farmers with
                 labor-saving automation, from working together to plant seeds,
@@ -40,7 +40,7 @@ const IotTechnology = () => {
               src="https://i.ibb.co/7YW2L6h/image-gal-02-RETOUCH.jpg"
               className="w-full h-5/6"
             />
-            <div className="absolute -bottom-40 md:bottom-10 md:right-0 max-w-md  px-10 py-5 text-white bg-gradient-to-r from-green-700 to-green-950  md:rounded-tl-3xl lg:text-xl">
+            <div className="absolute -bottom-40 md:bottom-10 md:right-0 max-w-xl  px-10 md:px-24 py-5 text-white bg-gradient-to-r from-green-700 to-green-950  md:rounded-tl-full lg:text-xl">
               <p>
                 By providing the ability to pinpoint the location, prevalence,
                 and manner of crop pests, digital tools enable precision crop
@@ -62,7 +62,7 @@ const IotTechnology = () => {
               src="https://i.ibb.co/WsK4Vjt/image-gal-03-RETOUCH3.jpg"
               className="w-full h-5/6"
             />
-            <div className="absolute -bottom-40 md:bottom-10 md:right-0 max-w-md  px-10 py-5 text-white bg-gradient-to-r from-green-700 to-green-950 md:rounded-tl-3xl pl- lg:text-xl">
+            <div className="absolute -bottom-40 md:bottom-10 md:right-0 max-w-xl  px-10 md:px-24 py-5 text-white bg-gradient-to-r from-green-700 to-green-950 md:rounded-tl-full  lg:text-xl">
               <p>
                 Ongoing advancements in data analytics will continue to provide
                 unprecedented insights that enable farmers to make more informed
@@ -84,7 +84,7 @@ const IotTechnology = () => {
               src="https://i.ibb.co/yyXrMqd/image-gal-04.jpg"
               className="w-full h-5/6"
             />
-            <div className="absolute -bottom-40 md:bottom-10 md:right-0 max-w-md  px-10 py-5 text-white bg-gradient-to-r from-green-700 to-green-950  md:rounded-tl-3xl lg:text-xl">
+            <div className="absolute -bottom-40 md:bottom-10 md:right-0 max-w-xl  px-10 md:px-24 py-5 text-white bg-gradient-to-r from-green-700 to-green-950  md:rounded-tl-full lg:text-xl">
               <p>
                 With tracking tools that help monitor the food supply chain,
                 digital technologies are improving food security while also

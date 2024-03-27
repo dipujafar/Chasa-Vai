@@ -22,7 +22,7 @@ const BecomeFarmer = () => {
               alt="teacherImg"
               className="lg:h-72 w-full"
               data-aos="fade-right"
-              data-aos-duration="2000"
+              data-aos-duration="1500"
             />
           </div>
           <div className="flex-1  max-w-md">
