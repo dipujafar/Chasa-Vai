@@ -28,7 +28,7 @@ const ContractFrom = () => {
             <input type="email" name="email" id="" placeholder="Email" className="w-full px-2 py-1 rounded mb-3" required />
             <input type="tel" name="phone" id="" placeholder="Phone" className="w-full px-2 py-1 rounded mb-3" required/>
             <textarea type="tel" name="message" id="" placeholder="How we can help you?" className="w-full px-2 py-1 rounded mb-3" required />
-            <input type="submit" value="SEND" className="btn text-white bg-gradient-to-r from-green-700 to-green-900 " />
+            <input type="submit" value="SEND" className="btn text-white bg-gradient-to-r from-pink-500 to-pink-700 " />
         </form>
     </div>
     );

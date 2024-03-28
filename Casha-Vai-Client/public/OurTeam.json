@@ -1,0 +1,44 @@
+[
+    {
+        "image": "https://i.ibb.co/MMMNQCx/395579758-1679175542606067-4363067495949393992-n.jpg",
+        "name": "Jafar Uddin Dipu",
+        "position": "Co-Founder & Chief Executive Officer",
+        "education": "Diploma in computer Engineering"
+    },
+    {
+        "image": "https://i.ibb.co/p1LC9Q9/person2.jpg",
+        "name": "Giovanna Masci",
+        "position": "Chief Operations Officer",
+        "education": "B.Sc. in Agriculture"
+    },
+    {
+        "image": "https://i.ibb.co/5TYrXdf/person1.jpg",
+        "name": "Kebede Ayele",
+        "position": "Managing Director",
+        "education": "B.Sc. in Agricultural Economics"
+    },
+    {
+        "image": "https://i.ibb.co/6BVPFJh/person5.jpg",
+        "name": "Alesha Miller",
+        "position": "Chief Strategy Officer",
+        "education": " B.Sc. in Horticulture"
+    },
+    {
+        "image": "https://i.ibb.co/31KQgtW/IMG-0138.jpg",
+        "name": "John Collery",
+        "position": "Chief Product Officer",
+        "education": "B.Sc. in Agricultural Economics"
+    },
+    {
+        "image": "https://i.ibb.co/rxp2vCt/person7.jpg",
+        "name": "Razak KM",
+        "position": "Vice President, Engineering",
+        "education": "B.Sc. in Agricultural  Fisheries"
+    },
+    {
+        "image": "https://i.ibb.co/r4qmYZs/person8.jpg",
+        "name": "Vineet Singh",
+        "position": "Chief Technology Officer",
+        "education": "IoT Specialization or Electives"
+    }
+]

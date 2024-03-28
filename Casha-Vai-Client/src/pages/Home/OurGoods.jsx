@@ -13,6 +13,15 @@ const OurGoods = () => {
       return res?.data
     }
   })
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <span className="loading loading-dots loading-lg text-green-600"></span>
+      </div>
+    );
+  }
+
   return (
     <Container>
       <SectionTitle

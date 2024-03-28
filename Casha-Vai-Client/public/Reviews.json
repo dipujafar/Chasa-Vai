@@ -1,0 +1,46 @@
+[
+    {
+        "image": "https://i.ibb.co/R3F7w2d/image2.jpg",
+        "name": "Mohammad Rahman",
+        "rating": 4.5,
+        "review": "FarmEr's smart farming solutions have completely transformed my agricultural practices. The IoT devices provided are reliable and easy to use, enabling me to monitor my farm efficiently. The customer service team is responsive and knowledgeable, addressing any queries promptly. Overall, I am highly satisfied with FarmEr's services and would wholeheartedly recommend it to fellow farmers.",
+        "userCategory": "Farmer"
+    },
+    
+    {
+        "image": "https://i.ibb.co/kcvH9zh/image4.jpg",
+        "name": "Nadia Begum",
+        "rating": 3,
+        "review": "FarmEr's platform is user-friendly, yet customer support could be more responsive. Despite delays in issue resolution, I appreciate FarmEr's innovative approach to agriculture. The smart farming solutions provided offer valuable insights. With improvements in support, FarmEr could better serve farmers like me seeking efficient agricultural solutions.",
+        "userCategory": "Customer"
+    },
+    {
+        "image": "https://i.ibb.co/dtqTXWv/image1.jpg",
+        "name": "Sadia Islam",
+        "rating": 4.2,
+        "review": "FarmEr has been instrumental in improving my crop yield and farm management. Their IoT solutions are intuitive and effective, providing valuable insights into soil moisture and crop health. While occasional technical glitches occur, the support team resolves them promptly. I am pleased with FarmEr's services and look forward to further enhancements.",
+        "userCategory": "Farmer"
+    },
+    {
+        "image": "https://i.ibb.co/wg4Xm5s/image6.jpg",
+        "name": "Rahim Khan",
+        "rating": 3.6,
+        "review": "FarmEr's IoT solutions have been beneficial in monitoring my farm activities. However, occasional technical hiccups hamper reliability. The customer service team addresses issues promptly, yet improvements are needed for seamless operations. Overall, I am satisfied with FarmEr's services and anticipate further enhancements to optimize farm management.",
+        "userCategory": "Customer"
+    },
+    {
+        "image": "https://i.ibb.co/2hGP3jj/image5.jpg",
+        "name": "Abdul Aziz",
+        "rating": 3.0,
+        "review": "FarmEr offers promising smart farming solutions, though there's room for improvement. The IoT devices provided have helped in monitoring my farm operations, yet occasional technical issues arise. With better reliability and customer support, FarmEr could excel further in empowering farmers like me to optimize agricultural practices.",
+        "userCategory": "Farmer"
+    },
+    {
+        "image": "https://i.ibb.co/wgH0hTd/image3.jpg",
+        "name": "Farhana Ahmed",
+        "rating": 4.8,
+        "review": "FarmEr's customer service is outstanding, and their smart farming solutions are truly transformative. The IoT devices are user-friendly and provide valuable data for decision-making. FarmEr has simplified farming for me, and I am highly impressed with their dedication to agricultural innovation. I wholeheartedly recommend FarmEr to other farmers seeking efficient solutions.",
+        "userCategory": "Customer"
+    }
+   
+]
