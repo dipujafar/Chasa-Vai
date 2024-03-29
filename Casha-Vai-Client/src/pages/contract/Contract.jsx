@@ -10,7 +10,7 @@ const Contract = () => {
     <div>
       <TopBanner
         img={contractBg}
-        title={"CONTACT US TODAY"}
+        title={"Contract Us Today"}
         description={"So that we can provide a smart solution for your needs."}
       ></TopBanner>
       <div  style={{ backgroundImage: `url(${bgImg})` }}>
