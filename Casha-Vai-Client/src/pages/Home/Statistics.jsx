@@ -58,7 +58,7 @@ const Statistics = () => {
                   {countOn && (
                     <CountUp
                       start={0}
-                      end={50}
+                      end={500}
                       duration={3}
                       delay={0}
                     ></CountUp>

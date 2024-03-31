@@ -7,6 +7,7 @@ import Login from "../autentication/login/Login";
 import Contract from "../pages/contract/Contract";
 import About from "../pages/about/About";
 import BeFarmer from "../pages/beFarmer/BeFarmer";
+import Products from "../pages/products/Products";
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "beFarmer",
         element: <BeFarmer></BeFarmer>
+      },
+      {
+        path: "order",
+        element: <Products></Products>
       }
     ]
   },

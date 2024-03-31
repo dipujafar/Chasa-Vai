@@ -1,0 +1,422 @@
+[
+  {
+    "name": "Organic Tomatoes",
+    "image": "https://i.ibb.co/z8TKzff/pexels-engin-akyurt-2899682.jpg",
+    "price": 2.99,
+    "details": "Freshly harvested organic tomatoes from our farm.",
+    "farmerName": "John Smith",
+    "email": "john@example.com",
+    "category": "vegetable",
+    "location": {
+      "district": "Dhaka",
+      "upazila": "Savar",
+      "village": "Nawabganj"
+    }
+  },
+  {
+    "name": "Granny Smith Apples",
+    "image": "https://i.ibb.co/0yySVQz/pexels-alexey-komissarov-16038614.jpg",
+    "price": 1.49,
+    "details": "Crisp and tart Granny Smith apples picked straight from the orchard.",
+    "farmerName": "Emily Johnson",
+    "email": "emily@example.com",
+    "category": "fruit",
+    "location": {
+      "district": "Rangpur",
+      "upazila": "Rangpur Sadar",
+      "village": "Dhap"
+    }
+  },
+  {
+    "name": "Free-Range Eggs",
+    "image": "https://i.ibb.co/vQdvkXq/pexels-julian-schwarzenbach-2764163.jpg",
+    "price": 3.99,
+    "details": "Fresh free-range eggs from happy chickens roaming our farm.",
+    "farmerName": "Michael Brown",
+    "email": "michael@example.com",
+    "category": "dairy",
+    "location": {
+      "district": "Comilla",
+      "upazila": "Comilla Sadar",
+      "village": "Kashinathpur"
+    }
+  },
+  {
+    "name": "hilsa",
+    "image": "https://i.ibb.co/mCFncFq/hilsha.jpg",
+    "price": 12.99,
+    "details": "Sustainably caught wild salmon, rich in omega-3 fatty acids.",
+    "farmerName": "Sarah Lee",
+    "email": "sarah@example.com",
+    "category": "fish",
+    "location": {
+      "district": "Cox's Bazar",
+      "upazila": "Chakaria",
+      "village": "Dulahazra"
+    }
+  },
+  {
+    "name": "Homemade Honey",
+    "image": "https://i.ibb.co/xmsPLYk/honey.jpg",
+    "price": 8.99,
+    "details": "Pure and natural honey produced by our bees.",
+    "farmerName": "David Miller",
+    "email": "david@example.com",
+    "category": "farm product",
+    "location": {
+      "district": "Sylhet",
+      "upazila": "Sylhet Sadar",
+      "village": "Birahimpur"
+    }
+  },
+  {
+    "name": "Organic Spinach",
+    "image": "https://i.ibb.co/F5VDC2N/Organic-Spinach.jpg",
+    "price": 2.49,
+    "details": "Nutrient-rich organic spinach leaves, perfect for salads.",
+    "farmerName": "Alice Green",
+    "email": "alice@example.com",
+    "category": "vegetable",
+    "location": {
+      "district": "Chittagong",
+      "upazila": "Satkania",
+      "village": "Siddique Bazar"
+    }
+  },
+  {
+    "name": "Fresh Strawberries",
+    "image": "https://i.ibb.co/crWBrPp/Fresh-Strawberries.jpg",
+    "price": 4.99,
+    "details": "Juicy and sweet strawberries freshly picked from our fields.",
+    "farmerName": "Robert Thompson",
+    "email": "robert@example.com",
+    "category": "fruit",
+    "location": {
+      "district": "Gazipur",
+      "upazila": "Gazipur Sadar",
+      "village": "Kaligonj"
+    }
+  },
+  {
+    "name": "Farm-Fresh Milk",
+    "image": "https://i.ibb.co/8YyYJv4/Farm-Fresh-Milk.jpg",
+    "price": 4.49,
+    "details": "Creamy and delicious milk from our dairy cows.",
+    "farmerName": "Laura Wilson",
+    "email": "laura@example.com",
+    "category": "dairy",
+    "location": {
+      "district": "Mymensingh",
+      "upazila": "Mymensingh Sadar",
+      "village": "Choto Baniadi"
+    }
+  },
+  {
+    "name": "Freshly Baked Bread",
+    "image": "https://i.ibb.co/rsNnZTj/Freshly-Baked-Bread.jpg",
+    "price": 3.99,
+    "details": "Warm and crusty bread baked with love in our farm bakery.",
+    "farmerName": "James Anderson",
+    "email": "james@example.com",
+    "category": "farm product",
+    "location": {
+      "district": "Tangail",
+      "upazila": "Tangail Sadar",
+      "village": "Santoshpur"
+    }
+  },
+  {
+    "name": "Organic Kale",
+    "image": "https://i.ibb.co/9ykGC2n/Organic-Kale.jpg",
+    "price": 1.99,
+    "details": "Fresh and nutritious organic kale bunches.",
+    "farmerName": "Olivia White",
+    "email": "olivia@example.com",
+    "category": "vegetable",
+    "location": {
+      "district": "Narayanganj",
+      "upazila": "Rupganj",
+      "village": "Kashipur"
+    }
+  },
+  {
+    "name": "Fresh Pineapple",
+    "image": "https://i.ibb.co/7JyPFVS/Fresh-Pineapplejpeg.jpg",
+    "price": 3.99,
+    "details": "Sweet and tangy pineapple freshly harvested from our plantation.",
+    "farmerName": "Daniel Clark",
+    "email": "daniel@example.com",
+    "category": "fruit",
+    "location": {
+      "district": "Khulna",
+      "upazila": "Dighalia",
+      "village": "Bhurulia"
+    }
+  },
+  {
+    "name": "Organic Carrots",
+    "image": "https://i.ibb.co/d2XYPhv/Organic-Carrots.jpg",
+    "price": 1.79,
+    "details": "Sweet and crunchy organic carrots straight from our fields.",
+    "farmerName": "Benjamin Martinez",
+    "email": "benjamin@example.com",
+    "category": "vegetable",
+    "location": {
+      "district": "Barisal",
+      "upazila": "Barisal Sadar",
+      "village": "Char Paka"
+    }
+  },
+  {
+    "name": "Freshly Laid Eggs",
+    "image": "https://i.ibb.co/VLgxdzN/Freshly-Laid-Eggs.jpg",
+    "price": 4.49,
+    "details": "Eggs laid fresh today by our happy hens.",
+    "farmerName": "Natalie Adams",
+    "email": "natalie@example.com",
+    "category": "dairy",
+    "location": {
+      "district": "Jessore",
+      "upazila": "Jessore Sadar",
+      "village": "Kathalbari"
+    }
+  },
+  {
+    "name": "Organic Blueberries",
+    "image": "https://i.ibb.co/jbvXdSh/Blueberries.jpg",
+    "price": 6.99,
+    "details": "Plump and sweet organic blueberries bursting with flavor.",
+    "farmerName": "Christopher Taylor",
+    "email": "christopher@example.com",
+    "category": "fruit",
+    "location": {
+      "district": "Sylhet",
+      "upazila": "Beanibazar",
+      "village": "Baluchar"
+    }
+  },
+  {
+    "name": "Fresh Corn",
+    "image": "https://i.ibb.co/BTs24jK/Fresh-Cornjpeg.jpg",
+    "price": 0.99,
+    "details": "Sweet and tender corn picked at the peak of freshness.",
+    "farmerName": "Emma Brown",
+    "email": "emma@example.com",
+    "category": "vegetable",
+    "location": {
+      "district": "Gazipur",
+      "upazila": "Gazipur Sadar",
+      "village": "Dhulivita"
+    }
+  },
+  {
+    "name": "Cotton fish",
+    "image": "https://i.ibb.co/1qTSwBJ/Cotton-fish.jpg",
+    "price": 10.99,
+    "details": "Delicious trout caught from the nearby river, ready for grilling.",
+    "farmerName": "Ethan Wilson",
+    "email": "ethan@example.com",
+    "category": "fish",
+    "location": {
+      "district": "Rangamati",
+      "upazila": "Rangamati Sadar",
+      "village": "Guchchagram"
+    }
+  },
+  {
+    "name": "Homemade Jam",
+    "image": "https://i.ibb.co/58Gywdg/Homemade-Jam.jpg",
+    "price": 5.49,
+    "details": "Delicious homemade jam made with ripe, seasonal fruits.",
+    "farmerName": "Madison Baker",
+    "email": "madison@example.com",
+    "category": "farm product",
+    "location": {
+      "district": "Dinajpur",
+      "upazila": "Dinajpur Sadar",
+      "village": "Balubari"
+    }
+  },
+  {
+    "name": "Organic Potatoes",
+    "image": "https://i.ibb.co/tPhKBtG/Organic-Potatoes.jpg",
+    "price": 1.29,
+    "details": "Versatile organic potatoes grown without synthetic pesticides.",
+    "farmerName": "Alexander Garcia",
+    "email": "alexander@example.com",
+    "category": "vegetable",
+    "location": {
+      "district": "Khulna",
+      "upazila": "Paikgachha",
+      "village": "Daulatpur"
+    }
+  },
+  {
+    "name": "Fresh Watermelon",
+    "image": "https://i.ibb.co/qd2RmD9/Fresh-Watermelon.jpg",
+    "price": 5.99,
+    "details": "Juicy and refreshing watermelon perfect for summer picnics.",
+    "farmerName": "Isabella Martinez",
+    "email": "isabella@example.com",
+    "category": "fruit",
+    "location": {
+      "district": "Chandpur",
+      "upazila": "Chandpur Sadar",
+      "village": "Batisa"
+    }
+  },
+  {
+    "name": "Farm-Fresh Honeycomb",
+    "image": "https://i.ibb.co/XkTKHYR/Farm-Fresh-Honeycomb.jpg",
+    "price": 9.99,
+    "details": "Raw honeycomb straight from our beehives, filled with sweet honey.",
+    "farmerName": "Noah Phillips",
+    "email": "noah@example.com",
+    "category": "farm product",
+    "location": {
+      "district": "Jessore",
+      "upazila": "Jhikargachha",
+      "village": "Kathalbari"
+    }
+  },
+  {
+    "name": "Fresh Cucumbers",
+    "image": "https://i.ibb.co/rsS5bbg/Fresh-Cucumbers.jpg",
+    "price": 1.49,
+    "details": "Crisp and cool cucumbers harvested daily from our fields.",
+    "farmerName": "Ava Collins",
+    "email": "ava@example.com",
+    "category": "vegetable",
+    "location": {
+      "district": "Bogra",
+      "upazila": "Shajahanpur",
+      "village": "Golabari"
+    }
+  },
+  {
+    "name": "Organic Oranges",
+    "image": "https://i.ibb.co/C06vNcL/Organic-Oranges.jpg",
+    "price": 2.49,
+    "details": "Juicy and vitamin-rich organic oranges straight from the grove.",
+    "farmerName": "Liam Johnson",
+    "email": "liam@example.com",
+    "category": "fruit",
+    "location": {
+      "district": "Tangail",
+      "upazila": "Tangail Sadar",
+      "village": "Bhuiyapara"
+    }
+  },
+  {
+    "name": "Fresh Goat Cheese",
+    "image": "https://i.ibb.co/qRsGFPn/Fresh-Goat-Cheese.jpg",
+    "price": 7.49,
+    "details": "Creamy and tangy goat cheese made from the milk of our own goats.",
+    "farmerName": "Mia Thompson",
+    "email": "mia@example.com",
+    "category": "dairy",
+    "location": {
+      "district": "Narayanganj",
+      "upazila": "Sonargaon",
+      "village": "Baidyer Bazar"
+    }
+  },
+  {
+    "name": "Organic Bell Peppers",
+    "image": "https://i.ibb.co/yR1ktwL/Organic-Bell-Peppers.jpg",
+    "price": 2.29,
+    "details": "Colorful organic bell peppers, perfect for adding flavor to any dish.",
+    "farmerName": "Lucas Davis",
+    "email": "lucas@example.com",
+    "category": "vegetable",
+    "location": {
+      "district": "Sylhet",
+      "upazila": "Bishwanath",
+      "village": "Jharuapara"
+    }
+  },
+  {
+    "name": "Fresh Sardines",
+    "image": "https://i.ibb.co/Y7L5h8n/Fresh-Sardines.jpg",
+    "price": 7.99,
+    "details": "Fresh sardines caught from the nearby sea, rich in omega-3 fatty acids.",
+    "farmerName": "Chloe Wilson",
+    "email": "chloe@example.com",
+    "category": "fish",
+    "location": {
+      "district": "Barisal",
+      "upazila": "Barisal Sadar",
+      "village": "Aliganj"
+    }
+  },
+  {
+    "name": "Homemade Granola",
+    "image": "https://i.ibb.co/qrt43yG/Homemade-Granola.jpg",
+    "price": 6.99,
+    "details": "Healthy and delicious granola made with oats, nuts, and dried fruits.",
+    "farmerName": "Elijah Moore",
+    "email": "elijah@example.com",
+    "category": "farm product",
+    "location": {
+      "district": "Khulna",
+      "upazila": "Batiaghata",
+      "village": "Kutubpur"
+    }
+  },
+  {
+    "name": "Organic Broccoli",
+    "image": "https://i.ibb.co/WW8JLHD/Organic-Broccoli.jpg",
+    "price": 1.99,
+    "details": "Nutrient-packed organic broccoli heads, perfect for steaming or stir-frying.",
+    "farmerName": "Avery Garcia",
+    "email": "avery@example.com",
+    "category": "vegetable",
+    "location": {
+      "district": "Comilla",
+      "upazila": "Comilla Sadar",
+      "village": "Shashidal"
+    }
+  },
+  {
+    "name": "Fresh Apricots",
+    "image": "https://i.ibb.co/cNQYW3N/Fresh-Apricots.jpg",
+    "price": 3.99,
+    "details": "Juicy and sweet apricots picked at the peak of ripeness.",
+    "farmerName": "Evelyn Clark",
+    "email": "evelyn@example.com",
+    "category": "fruit",
+    "location": {
+      "district": "Dhaka",
+      "upazila": "Dhamrai",
+      "village": "Khalpar"
+    }
+  },
+  {
+    "name": "Organic Yogurt",
+    "image": "https://i.ibb.co/sKLjs86/Organic-Yogurt.jpg",
+    "price": 4.99,
+    "details": "Creamy and probiotic-rich organic yogurt made from our farm-fresh milk.",
+    "farmerName": "Luke Rodriguez",
+    "email": "luke@example.com",
+    "category": "dairy",
+    "location": {
+      "district": "Tangail",
+      "upazila": "Tangail Sadar",
+      "village": "Kalai"
+    }
+  },
+  {
+    "name": "Fresh Raspberries",
+    "image": "https://i.ibb.co/hs4g47L/Fresh-Raspberries.jpg",
+    "price": 5.49,
+    "details": "Plump and sweet raspberries bursting with flavor.",
+    "farmerName": "Scarlett Baker",
+    "email": "scarlett@example.com",
+    "category": "fruit",
+    "location": {
+      "district": "Munshiganj",
+      "upazila": "Munshiganj Sadar",
+      "village": "Khalisur"
+    }
+  }
+]

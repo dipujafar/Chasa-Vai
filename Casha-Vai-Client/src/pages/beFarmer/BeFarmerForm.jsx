@@ -38,22 +38,22 @@ const BeFarmerForm = () => {
             <span className="text-red-600 ml-10">Name is required</span>
           )}
 
-          {/* Title input */}
+          {/* Farm Name input */}
           <div className="flex flex-col md:flex-row gap-1 mb-5 ">
             <label className="md:w-40">
-              Your Title <sup className="text-red-600">*</sup> :
+              Farm Title <sup className="text-red-600">*</sup> :
             </label>
             <input
               type="text"
               name="title"
-              {...register("title", { required: true })}
+              {...register("farmName", { required: true })}
               id=""
-              placeholder="Title"
+              placeholder="Farm Name"
               className="w-full md:w-3/4 mx-auto py-1 px-2   rounded"
             />
           </div>
           {errors.title?.type === "required" && (
-            <span className="text-red-600 ml-10">Title is required</span>
+            <span className="text-red-600 ml-10">Farm Name is required</span>
           )}
           {/* Nid number input */}
           <div className="flex flex-col md:flex-row gap-1 mb-5 ">

@@ -10,6 +10,7 @@ import { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import { toast } from "react-toastify";
 import googleLogo from "../../assets/image/googleLogo2.png"
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const LoginForm = () => {
     const [show, setShow] = useState(false);
@@ -17,6 +18,7 @@ const LoginForm = () => {
     const { signIn, singInWithGoogle} = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
+    const axiosPublic = useAxiosPublic();
 
     const {
         register,
@@ -39,9 +41,16 @@ const LoginForm = () => {
 
       const handleGoogleSing = () => {
         singInWithGoogle()
-          .then(() => {
-            toast.success("Successfully Login");
-            navigate(location?.state ? location?.state : "/");
+          .then((result) => {
+            const userInfo = {
+              email: result.user.email,
+              name: result.user.displayName,
+              image: result.user.photoURL
+            };
+            axiosPublic.post("/users", userInfo).then(() => {
+              toast.success("Success Login with Google");
+              navigate(location?.state ? location.state : "/");
+            });
           })
           .catch((error) => {
             setError(error.message);
