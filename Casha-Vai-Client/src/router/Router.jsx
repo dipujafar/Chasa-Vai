@@ -8,6 +8,9 @@ import Contract from "../pages/contract/Contract";
 import About from "../pages/about/About";
 import BeFarmer from "../pages/beFarmer/BeFarmer";
 import Products from "../pages/products/Products";
+import Dashboard from "../layout/Dashboard";
+import AllUser from "../pages/dashboard/allUser/AllUser";
+import FarmerReq from "../pages/dashboard/farmerReq/FarmerReq";
 
 
 const router = createBrowserRouter([
@@ -33,7 +36,7 @@ const router = createBrowserRouter([
         element: <BeFarmer></BeFarmer>
       },
       {
-        path: "order",
+        path: "order/:category",
         element: <Products></Products>
       }
     ]
@@ -47,6 +50,21 @@ const router = createBrowserRouter([
     path: '/login',
     element: <Login></Login>,
     errorElement: <ErrorPage></ErrorPage>
+  },
+  {
+    path: "dashboard",
+    errorElement: <ErrorPage></ErrorPage>,
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "allUser",
+        element: <AllUser></AllUser>
+      },
+      {
+        path: "farmerReq",
+        element: <FarmerReq></FarmerReq>
+      }
+    ]
   }
 ]);
 

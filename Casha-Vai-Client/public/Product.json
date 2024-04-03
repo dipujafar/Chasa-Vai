@@ -62,7 +62,7 @@
     "details": "Pure and natural honey produced by our bees.",
     "farmerName": "David Miller",
     "email": "david@example.com",
-    "category": "farm product",
+    "category": "other",
     "location": {
       "district": "Sylhet",
       "upazila": "Sylhet Sadar",
@@ -118,7 +118,7 @@
     "details": "Warm and crusty bread baked with love in our farm bakery.",
     "farmerName": "James Anderson",
     "email": "james@example.com",
-    "category": "farm product",
+    "category": "other",
     "location": {
       "district": "Tangail",
       "upazila": "Tangail Sadar",
@@ -230,7 +230,7 @@
     "details": "Delicious homemade jam made with ripe, seasonal fruits.",
     "farmerName": "Madison Baker",
     "email": "madison@example.com",
-    "category": "farm product",
+    "category": "other",
     "location": {
       "district": "Dinajpur",
       "upazila": "Dinajpur Sadar",
@@ -272,7 +272,7 @@
     "details": "Raw honeycomb straight from our beehives, filled with sweet honey.",
     "farmerName": "Noah Phillips",
     "email": "noah@example.com",
-    "category": "farm product",
+    "category": "other",
     "location": {
       "district": "Jessore",
       "upazila": "Jhikargachha",
@@ -356,7 +356,7 @@
     "details": "Healthy and delicious granola made with oats, nuts, and dried fruits.",
     "farmerName": "Elijah Moore",
     "email": "elijah@example.com",
-    "category": "farm product",
+    "category": "other",
     "location": {
       "district": "Khulna",
       "upazila": "Batiaghata",
@@ -417,6 +417,62 @@
       "district": "Munshiganj",
       "upazila": "Munshiganj Sadar",
       "village": "Khalisur"
+    }
+  },
+  {
+    "name": "Paddy",
+    "image": "https://i.ibb.co/SyX6XqR/Pratibha-MTU-5893-paddy.jpg",
+    "price": 25.99,
+    "details": "High-yield Pratibha (MTU 5893) paddy variety known for its excellent grain quality and disease resistance.",
+    "farmerName": "Rahul Gupta",
+    "email": "rahul@example.com",
+    "category": "cereals",
+    "location": {
+      "district": "Punjab",
+      "upazila": "Ludhiana",
+      "village": "Jagraon"
+    } 
+  },
+  {
+    "name": "Paddy",
+    "image": "https://i.ibb.co/d570mYf/Prabhat-MTU-3626.jpg",
+    "price": 24.99,
+    "details": "Prabhat (MTU 3626) paddy variety known for its excellent cooking quality and high yield.",
+    "farmerName": "Amit Singh",
+    "email": "amit@example.com",
+    "category": "cereals",
+    "location": {
+      "district": "Haryana",
+      "upazila": "Karnal",
+      "village": "Nilokheri"
+    }
+  },
+  {
+    "name": "Green Moong Dal",
+    "image": "https://i.ibb.co/p3PRd7z/Green-Mug-Dal.jpg",
+    "price": 7.49,
+    "details": "Nutritious green moong dal packed with protein and essential nutrients.",
+    "farmerName": "Priya Patel",
+    "email": "priya@example.com",
+    "category": "cereals",
+    "location": {
+      "district": "Gujarat",
+      "upazila": "Ahmedabad",
+      "village": "Sabarmati"
+    }
+  },
+  {
+    "name": "Moshur Dal",
+    "image": "https://i.ibb.co/7zKt1LY/Fresh-Premium-Deshi-Moshur-Dal.jpg",
+    "price": 6.99,
+    "details": "Premium quality moshur dal known for its excellent taste and texture.",
+    "farmerName": "Ankit Sharma",
+    "email": "ankit@example.com",
+    "category": "cereals",
+    "location": {
+      "district": "West Bengal",
+      "upazila": "Kolkata",
+      "village": "Salt Lake City"
     }
   }
 ]

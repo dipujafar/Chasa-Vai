@@ -5,10 +5,14 @@ import aboutBg from "../../assets/image/aboutBg.png";
 import AboutUs from "./AboutUs";
 import AboutMission from "./AboutMission";
 import Team from "./Team";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
     <div>
+      <Helmet>
+        <title>FarmEr | About</title>
+        </Helmet>
       <TopBanner
         img={bgImg}
         title={"Who We Are"}
