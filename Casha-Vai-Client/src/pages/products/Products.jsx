@@ -10,7 +10,7 @@ import Container from "../../shared/Container";
 import { Helmet } from "react-helmet-async";
 
 const Products = () => {
-  const [products] = useProducts();
+  const [products,  isLoading] = useProducts();
   const categories = [
     "vegetable",
     "fruit",
@@ -33,7 +33,14 @@ const Products = () => {
   const dairy = products?.filter((item) => item.category === "dairy");
   const other = products?.filter((item) => item.category === "other");
 
-  console.log(other);
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <span className="loading loading-dots loading-lg text-green-600"></span>
+      </div>
+    );
+  }
+
   return (
     <div>
       <Helmet>

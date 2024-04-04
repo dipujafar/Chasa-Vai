@@ -4,11 +4,13 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { toast } from 'react-toastify';
+import useCart from "../../hooks/useCart";
 
 const ProductDetails = ({ product }) => {
   const { user } = useAuth();
   const navigate = useNavigate();
   const axiosSecure = useAxiosSecure();
+  const [, , refetch] = useCart();
 
   const handleAddCart = async(event) => {
     event.preventDefault();
@@ -30,6 +32,7 @@ const ProductDetails = ({ product }) => {
     if(res?.data?.insertedId){
       toast.success("Successfully added in you Cart");
       form.reset();
+      refetch();
     }
   };
   return (

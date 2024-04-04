@@ -9,8 +9,11 @@ import About from "../pages/about/About";
 import BeFarmer from "../pages/beFarmer/BeFarmer";
 import Products from "../pages/products/Products";
 import Dashboard from "../layout/Dashboard";
-import AllUser from "../pages/dashboard/allUser/AllUser";
+
 import FarmerReq from "../pages/dashboard/farmerReq/FarmerReq";
+import Cart from "../pages/dashboard/customer/cart/Cart";
+import Payment from "../pages/dashboard/customer/payment/Payment";
+import PaymentHistory from "../pages/dashboard/customer/payment/PaymentHistory";
 
 
 const router = createBrowserRouter([
@@ -57,12 +60,20 @@ const router = createBrowserRouter([
     element: <Dashboard></Dashboard>,
     children: [
       {
-        path: "allUser",
-        element: <AllUser></AllUser>
-      },
-      {
         path: "farmerReq",
         element: <FarmerReq></FarmerReq>
+      },
+      {
+        path: "cart",
+        element: <Cart></Cart>
+      },
+      {
+        path: "payment",
+        element: <Payment></Payment>
+      },
+      {
+        path: "paymentHistory",
+        element: <PaymentHistory></PaymentHistory>
       }
     ]
   }

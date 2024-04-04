@@ -4,13 +4,16 @@ require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const app = express();
 const port = process.env.PORT || 5000;
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
+const stripe = require("stripe")(process.env.STRIPE_TOKEN);
 
 // middleware
-app.use(cors({
-  origin: ["http://localhost:5173"],
-  credentials: true 
-}));
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://chasa-vai.web.app"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 const verifyToken = async (req, res, next) => {
@@ -48,6 +51,7 @@ async function run() {
     const userCollection = client.db("FarmEr").collection("users");
     const productsCollection = client.db("FarmEr").collection("products");
     const cartCollection = client.db("FarmEr").collection("cart");
+    const paymentsCollection = client.db("FarmEr").collection("payment");
 
     //jwt related apis
     app.post("/jwt", async (req, res) => {
@@ -57,6 +61,28 @@ async function run() {
           expiresIn: "1h",
         });
         res.send({ token });
+      } catch {
+        (err) => {
+          res.send(err);
+        };
+      }
+    });
+
+    // admin related api
+    app.get("/users/admin/:email", verifyToken, async (req, res) => {
+      try {
+        const email = req.params.email;
+        if (email !== req.decoded.email) {
+          return res.status(403).send({ message: "forbidden" });
+        }
+
+        const query = { email: email };
+        const user = await userCollection.findOne(query);
+        let admin = false;
+        if (user) {
+          admin = user?.role === "admin";
+        }
+        res.send({ admin });
       } catch {
         (err) => {
           res.send(err);
@@ -77,6 +103,18 @@ async function run() {
     });
 
     //user related
+    app.get("/users", verifyToken, async(req, res)=>{
+      try{
+        const result = await userCollection.find().toArray();
+        res.send(result)
+      }
+      catch {
+        (err) => {
+          res.send(err);
+        };
+      }
+    })
+    
     app.post("/users", async (req, res) => {
       try {
         const user = req.body;
@@ -97,11 +135,73 @@ async function run() {
 
     // cart related apis
 
-    app.get("/cart/:email", verifyToken, async(req,res)=>{
+    app.get("/cart/:email", verifyToken, async (req, res) => {
+      try {
+        const email = req?.params?.email;
+        const query = { email: email };
+        const result = await cartCollection.find(query).toArray();
+        res.send(result);
+      } catch {
+        (err) => {
+          res.send(err);
+        };
+      }
+    });
+
+    app.post("/cart", verifyToken, async (req, res) => {
+      try {
+        const productsData = req?.body;
+        const result = await cartCollection.insertOne(productsData);
+        res.send(result);
+      } catch {
+        (err) => {
+          res.send(err);
+        };
+      }
+    });
+
+    app.delete("/cart/:id", async (req, res) => {
+      try {
+        const id = req?.params?.id;
+        const query = { _id: new ObjectId(id) };
+        const result = await cartCollection.deleteOne(query);
+        res.send(result);
+      } catch {
+        (err) => {
+          res.send(err);
+        };
+      }
+    });
+
+    // payment intent
+    app.post("/create-payment-intent", async (req, res) => {
+      try {
+        const { price } = req.body;
+        const amount = parseInt(price * 100);
+
+        const paymentIntent = await stripe.paymentIntents.create({
+          amount: amount,
+          currency: "usd",
+          payment_method_types: ["card"],
+        });
+
+        res.send({
+          clientSecret: paymentIntent.client_secret,
+        });
+      } catch {
+        (err) => {
+          res.send(err);
+        };
+      }
+    });
+
+    // payments related apis
+
+    app.get("/payments/:email", verifyToken, async(req, res)=>{
       try{
         const email = req?.params?.email;
-        const query = {email: email}
-        const result = await cartCollection.find(query).toArray();
+        const query = {email: email};
+        const result = await paymentsCollection.find(query).toArray();
         res.send(result)
       }
       catch {
@@ -111,19 +211,27 @@ async function run() {
       }
     })
 
-    app.post("/cart", verifyToken, async(req,res)=>{
-      try{
-        const productsData = req?.body;
-        const result = await cartCollection.insertOne(productsData);
-        res.send(result)
-       
-      }
-      catch {
+    app.post("/payments", verifyToken, async (req, res) => {
+      try {
+        const payment = req.body;
+        const paymentResult = await paymentsCollection.insertOne(payment);
+
+        const query = {
+          _id: {
+            $in: payment?.cartIds?.map((id) => new ObjectId(id)),
+          },
+        };
+
+        const deleteResult = await cartCollection.deleteMany(query);
+        res.send({ paymentResult, deleteResult });
+      } catch {
         (err) => {
           res.send(err);
         };
       }
-    })
+    });
+
+    
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
