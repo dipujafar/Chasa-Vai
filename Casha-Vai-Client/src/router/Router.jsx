@@ -14,6 +14,7 @@ import FarmerReq from "../pages/dashboard/farmerReq/FarmerReq";
 import Cart from "../pages/dashboard/customer/cart/Cart";
 import Payment from "../pages/dashboard/customer/payment/Payment";
 import PaymentHistory from "../pages/dashboard/customer/payment/PaymentHistory";
+import AllUser from "../pages/dashboard/allUser/AllUser";
 
 
 const router = createBrowserRouter([
@@ -59,9 +60,14 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     element: <Dashboard></Dashboard>,
     children: [
+      // admin Routes
       {
         path: "farmerReq",
         element: <FarmerReq></FarmerReq>
+      },
+      {
+        path: "allUsers",
+        element: <AllUser></AllUser>
       },
       {
         path: "cart",

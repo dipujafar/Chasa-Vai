@@ -1,35 +1,70 @@
 import { Helmet } from "react-helmet-async";
 import Container from "../../../shared/Container";
 import useUsers from "../../../hooks/useUsers";
-import { useState } from "react";
-
+import Swal from "sweetalert2";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 const AllUser = () => {
-    const [users] = useUsers();
+  const [users, isLoading, refetch] = useUsers();
+  const reverseArr = [...users].reverse();
+  const axiosSecure = useAxiosSecure();
+  console.log(users);
+
+  const handleAdmin = (user) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: `You won't be make admin ${user?.name} !`,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Confirm!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        const res = await axiosSecure.put(`/users/admin/${user?.email}`);
+        if (res?.data?.modifiedCount > 0) {
+          Swal.fire({
+            title: "Congratulation",
+            text: `Now ${user?.name} is an Admin.`,
+            icon: "success",
+          });
+          refetch();
+        }
+      }
+    });
+  };
 
 
+  if (isLoading) {
     return (
-        <div className="text-white">
+      <div className="flex justify-center items-center h-screen">
+        <span className="loading loading-dots loading-lg text-green-600"></span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-full">
       <Helmet>
-        <title>Knack | Admin All User</title>
+        <title>FarmEr | Admin All User</title>
       </Helmet>
       <Container>
         <div className="mb-2 flex flex-col md:flex-row items-center justify-between gap-3">
           <h2 className="text-3xl font-medium ">Total User : {users.length}</h2>
         </div>
-        <div className="overflow-x-auto bg-gradient-to-r from-sky-950 to-sky-900 rounded">
+        <div className="overflow-x-auto rounded">
           <table className="table">
             {/* head */}
             <thead>
               <tr>
                 <th>#</th>
-                <th className="text-white">User</th>
-                <th className="text-white">Email</th>
-                <th className="text-white">Role</th>
+                <th>User</th>
+                <th>Email</th>
+                <th>Role</th>
                 <th>Action</th>
               </tr>
             </thead>
-            {users?.map((user, inx) => (
+            {reverseArr?.map((user, inx) => (
               <tbody key={user?._id}>
                 {/* row 1 */}
                 <tr>
@@ -52,15 +87,13 @@ const AllUser = () => {
 
                   <th>
                     {user?.role === "admin" ? (
-                      <button
-                        className="btn btn-disabled btn-sm bg-gradient-to-r from-cyan-950 to-sky-900 rounded text-white" 
-                      >
+                      <button className="btn btn-disabled btn-sm bg-gradient-to-r from-pink-500 to-pink-700 text-white">
                         Make Admin
                       </button>
                     ) : (
                       <button
-                        // onClick={() => handleAdmin(user)}
-                        className="btn btn-sm bg-gradient-to-r from-cyan-950 to-sky-900 rounded text-white"
+                        onClick={() => handleAdmin(user)}
+                        className="btn btn-sm bg-gradient-to-r from-pink-500 to-pink-700 text-white rounded "
                       >
                         Make Admin
                       </button>
@@ -73,7 +106,7 @@ const AllUser = () => {
         </div>
       </Container>
     </div>
-    );
+  );
 };
 
 export default AllUser;

@@ -53,6 +53,19 @@ async function run() {
     const cartCollection = client.db("FarmEr").collection("cart");
     const paymentsCollection = client.db("FarmEr").collection("payment");
 
+    //middle
+    const verifyAdmin = async (req, res, next) => {
+      const email = req?.decoded?.email;
+      const query = { email: email };
+      const user = await userCollection.findOne(query);
+      const isAdmin = user?.role === "admin";
+      if (!isAdmin) {
+        return res.status(403).send({ message: "forbidden" });
+      }
+      next();
+    };
+
+
     //jwt related apis
     app.post("/jwt", async (req, res) => {
       try {
@@ -90,6 +103,29 @@ async function run() {
       }
     });
 
+    app.put("/users/admin/:email",  async (req, res) => {
+      try {
+        const email = req.params.email;
+        const query = { email: email };
+        const options = { upsert: true };
+        const updateDoc = {
+          $set: {
+            role: "admin",
+          },
+        };
+        const result = await userCollection.updateOne(
+          query,
+          updateDoc,
+          options
+        );
+        res.send(result);
+      } catch {
+        (err) => {
+          res.send(err);
+        };
+      }
+    });
+
     //products api
     app.get("/products", async (req, res) => {
       try {
@@ -103,18 +139,17 @@ async function run() {
     });
 
     //user related
-    app.get("/users", verifyToken, async(req, res)=>{
-      try{
+    app.get("/users", verifyToken, verifyAdmin, async (req, res) => {
+      try {
         const result = await userCollection.find().toArray();
-        res.send(result)
-      }
-      catch {
+        res.send(result);
+      } catch {
         (err) => {
           res.send(err);
         };
       }
-    })
-    
+    });
+
     app.post("/users", async (req, res) => {
       try {
         const user = req.body;
@@ -197,19 +232,18 @@ async function run() {
 
     // payments related apis
 
-    app.get("/payments/:email", verifyToken, async(req, res)=>{
-      try{
+    app.get("/payments/:email", verifyToken, async (req, res) => {
+      try {
         const email = req?.params?.email;
-        const query = {email: email};
+        const query = { email: email };
         const result = await paymentsCollection.find(query).toArray();
-        res.send(result)
-      }
-      catch {
+        res.send(result);
+      } catch {
         (err) => {
           res.send(err);
         };
       }
-    })
+    });
 
     app.post("/payments", verifyToken, async (req, res) => {
       try {
@@ -230,8 +264,6 @@ async function run() {
         };
       }
     });
-
-    
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });

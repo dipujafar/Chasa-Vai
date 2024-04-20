@@ -22,14 +22,8 @@ const DashboardLinks = () => {
         </li>
         <hr />
         <li>
-          <Link to={"/"} className="btn btn-ghost text-xl">
-            <img src={logo} alt="logo-image" className="w-12" />
-            <span>FarmEr</span>
-          </Link>
-        </li>
-        <li>
           <NavLink
-            to="/dashboard/allUser"
+            to="/dashboard/allUsers"
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "active" : ""
             }
