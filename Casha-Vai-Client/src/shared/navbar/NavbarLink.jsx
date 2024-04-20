@@ -2,11 +2,12 @@ import { NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { BsCart4 } from "react-icons/bs";
 import useCart from "../../hooks/useCart";
+import useAdmin from "../../hooks/useAdmin";
 
 const NavbarLink = () => {
   const { user } = useAuth();
   const [cart] = useCart();
-  console.log(cart)
+  const [isAdmin] = useAdmin();
   return (
     <>
       <li>
@@ -59,7 +60,21 @@ const NavbarLink = () => {
           Contract
         </NavLink>
       </li>
-      {user ? (
+      {user && isAdmin &&  (
+        <>
+        <li>
+          <NavLink
+            to="/dashboard/allUsers"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""
+            }
+          >
+           Dashboard
+          </NavLink>
+        </li>
+        </>
+      )}
+      {user && !isAdmin &&  (
         <>
         <li>
           <NavLink
@@ -83,8 +98,6 @@ const NavbarLink = () => {
         </li>
 
         </>
-      ) : (
-        ""
       )}
     </>
   );
