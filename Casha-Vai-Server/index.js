@@ -46,7 +46,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await client.connect();
 
     const userCollection = client.db("FarmEr").collection("users");
     const productsCollection = client.db("FarmEr").collection("products");
@@ -119,6 +119,28 @@ async function run() {
           options
         );
         res.send(result);
+      } catch {
+        (err) => {
+          res.send(err);
+        };
+      }
+    });
+
+    //Farmer related apis
+    app.get("/users/farmer/:email", verifyToken, async (req, res) => {
+      try {
+        const email = req.params.email;
+        if (email !== req.decoded.email) {
+          return res.status(403).send({ message: "forbidden" });
+        }
+
+        const query = { email: email };
+        const user = await userCollection.findOne(query);
+        let farmer = false;
+        if (user) {
+          teacher = user?.role === "farmer";
+        }
+        res.send({ farmer });
       } catch {
         (err) => {
           res.send(err);
@@ -266,10 +288,10 @@ async function run() {
     });
 
     // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log(
-      "Pinged your deployment. You successfully connected to MongoDB!"
-    );
+    // await client.db("admin").command({ ping: 1 });
+    // console.log(
+    //   "Pinged your deployment. You successfully connected to MongoDB!"
+    // );
   } finally {
     // Ensures that the client will close when you finish/error
     // await client.close();

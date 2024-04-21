@@ -43,7 +43,7 @@ const DashboardLinks = () => {
         </li>
         <li>
           <NavLink
-            to="/dashboard/All Product"
+            to="/dashboard/allProduct"
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "active" : ""
             }

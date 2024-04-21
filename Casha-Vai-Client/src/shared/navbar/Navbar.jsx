@@ -81,7 +81,7 @@ const Navbar = () => {
                 {open && (
                   <div
                     ref={menuRef}
-                    className="absolute top-14 right-0 z-10 bg-gradient-to-r from-sky-800 to-sky-600 rounded  text-gray-200 w-52 p-4 space-y-2"
+                    className="absolute top-14 right-0 z-10 bg-gradient-to-r from-sky-800 to-sky-600 rounded  text-gray-200 w-72 p-4 space-y-2"
                   >
                     <img
                       src={user?.photoURL}
@@ -93,6 +93,12 @@ const Navbar = () => {
                     <Link to="/">
                       <p className=" mt-1 flex items-center gap-1 hover:text-sky-300">
                         <FaHome /> Home
+                      </p>
+                    </Link>
+                    <hr />
+                    <Link to="/dashboard/profile">
+                      <p className="mt-1 flex items-center gap-1 hover:text-sky-300">
+                        <FaHome /> profile
                       </p>
                     </Link>
                     <hr />

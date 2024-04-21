@@ -15,6 +15,8 @@ import Cart from "../pages/dashboard/customer/cart/Cart";
 import Payment from "../pages/dashboard/customer/payment/Payment";
 import PaymentHistory from "../pages/dashboard/customer/payment/PaymentHistory";
 import AllUser from "../pages/dashboard/allUser/AllUser";
+import Profile from "../pages/dashboard/profile/Profile";
+import AllProducts from "../pages/dashboard/allProduct/AllProducts";
 
 
 const router = createBrowserRouter([
@@ -70,6 +72,11 @@ const router = createBrowserRouter([
         element: <AllUser></AllUser>
       },
       {
+        path:  "allProduct",
+        element: <AllProducts></AllProducts>
+      },
+      // user routes
+      {
         path: "cart",
         element: <Cart></Cart>
       },
@@ -80,6 +87,10 @@ const router = createBrowserRouter([
       {
         path: "paymentHistory",
         element: <PaymentHistory></PaymentHistory>
+      },
+      {
+        path: "profile",
+        element: <Profile></Profile>
       }
     ]
   }
