@@ -10,11 +10,11 @@ const Contract = () => {
   return (
     <div>
       <Helmet>
-        <title>FarmEr | Contract</title>
+        <title>FarmEr | Contact</title>
       </Helmet>
       <TopBanner
         img={contractBg}
-        title={"Contract Us Today"}
+        title={"Contrct Us Today"}
         description={"So that we can provide a smart solution for your needs."}
       ></TopBanner>
       <div style={{ backgroundImage: `url(${bgImg})` }}>

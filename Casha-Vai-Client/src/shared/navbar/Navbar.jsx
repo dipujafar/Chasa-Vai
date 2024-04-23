@@ -1,5 +1,5 @@
 import Container from "../Container";
-import logo from "../../assets/image/signUpimg2.png";
+import logo from "../../assets/image/logo.png";
 import { FaHome } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
 import { CgLogOut } from "react-icons/cg";

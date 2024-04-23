@@ -1,6 +1,6 @@
 import Container from "../../shared/Container";
 import LoginForm from "./LoginForm";
-import loginImg from "../../assets/image/signUpimg2.png"
+import loginImg from "../../assets/image/logo.png"
 import { Helmet } from "react-helmet-async";
 
 const Login = () => {

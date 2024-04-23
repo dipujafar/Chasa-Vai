@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/image/signUpimg2.png";
+import logo from "../assets/image/logo.png";
 import useAdmin from "../hooks/useAdmin";
 import useAuth from "../hooks/useAuth";
 import useCart from "../hooks/useCart";

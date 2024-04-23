@@ -1,4 +1,4 @@
-import logo from "../assets/image/signUpimg2.png";
+import logo from "../assets/image/logo.png";
 import moment from 'moment'
 import { Link } from "react-router-dom";
 import Container from "./Container";

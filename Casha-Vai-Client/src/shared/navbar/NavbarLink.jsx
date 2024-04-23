@@ -57,7 +57,7 @@ const NavbarLink = () => {
             isPending ? "pending" : isActive ? "active" : ""
           }
         >
-          Contract
+          Contact
         </NavLink>
       </li>
       {user && isAdmin &&  (
