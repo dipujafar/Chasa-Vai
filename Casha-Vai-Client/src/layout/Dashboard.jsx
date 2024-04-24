@@ -14,7 +14,7 @@ const Dashboard = () => {
         >
           <HiMenu className="text-xl" />
         </label>
-        <div className="w-full px-5">
+        <div className="w-full p-5 ">
           <Outlet></Outlet>
         </div>
       </div>

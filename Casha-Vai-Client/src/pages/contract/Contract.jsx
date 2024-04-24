@@ -14,7 +14,7 @@ const Contract = () => {
       </Helmet>
       <TopBanner
         img={contractBg}
-        title={"Contrct Us Today"}
+        title={"Contact Us Today"}
         description={"So that we can provide a smart solution for your needs."}
       ></TopBanner>
       <div style={{ backgroundImage: `url(${bgImg})` }}>

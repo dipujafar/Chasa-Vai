@@ -126,6 +126,19 @@ async function run() {
       }
     });
 
+    // get all product api
+    app.get("/allProducts", verifyToken, verifyAdmin, async(req, res)=>{
+      try{
+        const result = await productsCollection.find().toArray()
+        res.send(result);
+      }
+      catch {
+        (err) => {
+          res.send(err);
+        };
+      }
+    }) 
+
     //Farmer related apis
     app.get("/users/farmer/:email", verifyToken, async (req, res) => {
       try {

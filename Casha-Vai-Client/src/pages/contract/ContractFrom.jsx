@@ -22,7 +22,7 @@ const ContractFrom = () => {
     };
     return (
         <div className="flex flex-col gap-2 py-20 px-10 bg-gray-300">
-        <h1 className="mb-2 text-2xl font-medium text-green-700 uppercase">Contract</h1>
+        <h1 className="mb-2 text-2xl font-medium text-green-700 uppercase">Contact</h1>
         <form ref={form} onSubmit={sendEmail}>
             <input type="text" name="from_name" id="" placeholder="Name" className="w-full px-2 py-1 rounded mb-3" required />
             <input type="email" name="email" id="" placeholder="Email" className="w-full px-2 py-1 rounded mb-3" required />
