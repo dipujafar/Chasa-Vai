@@ -52,6 +52,7 @@ async function run() {
     const productsCollection = client.db("FarmEr").collection("products");
     const cartCollection = client.db("FarmEr").collection("cart");
     const paymentsCollection = client.db("FarmEr").collection("payment");
+    const farmerReqCollection = client.db("FarmEr").collection("farmerReq");
 
     //middle
     const verifyAdmin = async (req, res, next) => {
@@ -160,6 +161,20 @@ async function run() {
         };
       }
     });
+
+    // insert farmer Request data
+    app.post("/farmerReq", verifyToken, async(req, res)=>{
+      try{
+        const reqData = req?.body;
+        const result = await farmerReqCollection.insertOne(reqData);
+        res.send(result)
+      }
+      catch {
+        (err) => {
+          res.send(err);
+        };
+      }
+    })
 
     //products api
     app.get("/products", async (req, res) => {

@@ -1,17 +1,72 @@
 import { useForm } from "react-hook-form";
 import { FaCamera } from "react-icons/fa";
+import { imageUpload } from "../../api/image";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
+import useAuth from "../../hooks/useAuth";
+import useAdmin from "../../hooks/useAdmin";
+import useFarmer from "../../hooks/useFarmer";
+import { toast } from "react-toastify";
 
 const BeFarmerForm = () => {
+  const axiosSecure = useAxiosSecure();
+  const {user} = useAuth();
+  const [isAdmin] = useAdmin();
+  const [isFarmer] = useFarmer();
   const {
     register,
     handleSubmit,
-    // reset,
+    reset,
     formState: { errors },
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data)
+    const {name, farmName, nidNum, cardNum, experience, category, image, location} = data || {}
+
+    const imageFile = image[0];
+    const imageData = await imageUpload(imageFile);
+
+    
+
+    const reqData = {
+    name,
+    email: user?.email,
+    farmName,
+    nidNum,
+    cardNum,
+    experience,
+    category,
+    image : imageData?.data?.url,
+    location
+    }
+
+    const res = await axiosSecure.post("/farmerReq", reqData);
+    if(res?.data?.insertedId){
+      toast("Your request is pending. Please wait for approve");
+      reset();
+    }
   }
+
+  if (isAdmin) {
+    return (
+        <div className="min-h-[50vh] flex justify-center items-center">
+          <div>
+          <h1 className="text-3xl mb-2 text-center">Your are an Admin </h1>
+          <p className="text-xl   text-center">You are not eligible for the application</p>
+          </div>
+        </div>
+    );
+    }
+
+    if (isFarmer) {
+      return (
+          <div className=" min-h-[50vh] flex justify-center items-center">
+            <div>
+            <h1 className="text-3xl mb-2 text-center">Your are already a registered farmer</h1>
+            <p className="text-xl   text-center">You are not eligible for the application</p>
+            </div>
+          </div>
+      );
+    }
 
   return (
     <div>
@@ -88,23 +143,25 @@ const BeFarmerForm = () => {
             />
           </div>
 
-          {/* Experience input */}
+          {/* Location input */}
           <div className="flex flex-col md:flex-row gap-1 mb-5 ">
             <label className="md:w-40">
-              Experience <sup className="text-red-600">*</sup> :
+             Location<sup className="text-red-600">*</sup> :
             </label>
-            <select
-              {...register("experience", { required: true })}
-              className="w-full md:w-3/4 mx-auto py-1 px-2   rounded "
-            >
-              <option value="beginner">beginner</option>
-              <option value="intermediate"> intermediate</option>
-              <option value="experienced">experienced</option>
-            </select>
+            <input
+              type="text"
+              name="location"
+              {...register("location", { required: true })}
+              id=""
+              placeholder="Districts, Area/Upazilla, Word/Village"
+              className="w-full md:w-3/4 mx-auto py-1 px-2  rounded"
+            />
           </div>
-          {errors.experience?.type === "required" && (
-            <span className="text-red-600 ml-10">Experience is required</span>
+          {errors.location?.type === "required" && (
+            <span className="text-red-600 ml-10">Location is required</span>
           )}
+
+        
 
           {/* Category input */}
           <div className="flex flex-col md:flex-row gap-1 mb-5 ">
