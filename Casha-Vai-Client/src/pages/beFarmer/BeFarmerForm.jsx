@@ -36,7 +36,8 @@ const BeFarmerForm = () => {
     experience,
     category,
     image : imageData?.data?.url,
-    location
+    location,
+    status: "pending"
     }
 
     const res = await axiosSecure.post("/farmerReq", reqData);

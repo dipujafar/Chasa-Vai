@@ -162,6 +162,19 @@ async function run() {
       }
     });
 
+    // get farmer Request data 
+    app.get("/farmerReq",verifyToken, verifyAdmin, async(req,res)=>{
+      try{
+        const result = await farmerReqCollection.find().toArray()
+        res.send(result);
+      }
+      catch {
+        (err) => {
+          res.send(err);
+        };
+      }
+    })
+
     // insert farmer Request data
     app.post("/farmerReq", verifyToken, async(req, res)=>{
       try{

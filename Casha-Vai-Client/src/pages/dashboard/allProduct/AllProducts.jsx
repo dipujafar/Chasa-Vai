@@ -3,7 +3,7 @@ import useAllProducts from "../../../hooks/useAllProducts";
 
 
 const AllProducts = () => {
-    const [allProducts, isLoading, refetch] = useAllProducts();
+    const [allProducts, isLoading] = useAllProducts();
     const reverseArray = [...allProducts].reverse();
 
     const handleApprove = () =>{
