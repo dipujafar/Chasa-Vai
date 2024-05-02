@@ -141,6 +141,14 @@ const LoginForm = () => {
           <span className="text-cyan-300">Sign Up</span>
         </Link>
       </p>
+      <div className="mt-5 flex flex-col justify-center items-center">
+          <p>admin2@gmail.com</p>
+          <p>123456</p>
+          <p>customer@gmail.com</p>
+          <p>123456</p>
+          <p>farmer@gmail.com</p>
+          <p>123456</p>
+      </div>
     </div>
   );
 };
