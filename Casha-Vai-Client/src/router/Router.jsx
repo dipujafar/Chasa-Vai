@@ -17,6 +17,7 @@ import PaymentHistory from "../pages/dashboard/customer/payment/PaymentHistory";
 import AllUser from "../pages/dashboard/allUser/AllUser";
 import Profile from "../pages/dashboard/profile/Profile";
 import AllProducts from "../pages/dashboard/allProduct/AllProducts";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: "beFarmer",
-        element: <BeFarmer></BeFarmer>
+        element: <PrivateRoute> <BeFarmer></BeFarmer></PrivateRoute>,
       },
       {
         path: "order/:category",
@@ -58,9 +59,9 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>
   },
   {
-    path: "dashboard",
+    path: "/dashboard",
     errorElement: <ErrorPage></ErrorPage>,
-    element: <Dashboard></Dashboard>,
+    element: <PrivateRoute> <Dashboard></Dashboard> </PrivateRoute>,
     children: [
       // admin Routes
       {

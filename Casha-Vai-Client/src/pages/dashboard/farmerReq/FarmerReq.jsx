@@ -7,7 +7,7 @@ const FarmerReq = () => {
   const reverseArray = [...farmerReq];
   console.log(farmerReq);
 
-  const  handleApprove = () =>{
+  const handleApprove = () => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be approve this request!",
@@ -15,8 +15,8 @@ const FarmerReq = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Confirm!"
-    }).then(async(result) => {
+      confirmButtonText: "Confirm!",
+    }).then(async (result) => {
       if (result.isConfirmed) {
         // const res = await axiosSecure.put(`/users/teacherReq/${email}`);
         // if(res?.data?. userUpdate?.modifiedCount > 0 && res?.data?. reqUpdate?.modifiedCount > 0){
@@ -26,12 +26,12 @@ const FarmerReq = () => {
         //     icon: "success"
         //   });
         //   refetch();
-        // }       
+        // }
       }
     });
-  }
+  };
 
-  const handleReject = () =>{
+  const handleReject = () => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be reject this request!",
@@ -39,21 +39,21 @@ const FarmerReq = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Confirm!"
-    }).then(async(result) => {
-      if (result.isConfirmed) {
-        // const res = await axiosSecure.put(`/users/teacherReq/reject/${email}`);
-        // if(res?.data?.modifiedCount > 0 ){
-        //   Swal.fire({
-        //     title: "Successfully!",
-        //     text: "Rejected this request",
-        //     icon: "error"
-        //   });
-        //   refetch();
-        // }       
-      }
+      confirmButtonText: "Confirm!",
+    }).then(async (result) => {
+      // if (result.isConfirmed) {
+      //   const res = await axiosSecure.put(`/users/teacherReq/reject/${email}`);
+      //   if(res?.data?.modifiedCount > 0 ){
+      //     Swal.fire({
+      //       title: "Successfully!",
+      //       text: "Rejected this request",
+      //       icon: "error"
+      //     });
+      //     refetch();
+      //   }
+      // }
     });
-  }
+  };
   return (
     <div>
       <div>
@@ -112,10 +112,7 @@ const FarmerReq = () => {
                         Approve
                       </button>
                     ) : (
-                      <button
-                        className="btn btn-sm rounded"
-                        disabled
-                      >
+                      <button className="btn btn-sm rounded" disabled>
                         {" "}
                         Approve
                       </button>
@@ -130,10 +127,7 @@ const FarmerReq = () => {
                         Reject
                       </button>
                     ) : (
-                      <button
-                        className="btn btn-sm rounded "
-                        disabled
-                      >
+                      <button className="btn btn-sm rounded " disabled>
                         {" "}
                         Reject
                       </button>

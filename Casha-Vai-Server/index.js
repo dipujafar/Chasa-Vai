@@ -163,7 +163,7 @@ async function run() {
     });
 
     // get farmer Request data 
-    app.get("/farmerReq",verifyToken, verifyAdmin, async(req,res)=>{
+    app.get("/farmerReq",verifyToken, async(req,res)=>{
       try{
         const result = await farmerReqCollection.find().toArray()
         res.send(result);
