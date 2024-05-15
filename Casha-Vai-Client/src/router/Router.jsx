@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: "beFarmer",
-        element: <PrivateRoute> <BeFarmer></BeFarmer></PrivateRoute>,
+        element: <BeFarmer></BeFarmer>,
       },
       {
         path: "order/:category",

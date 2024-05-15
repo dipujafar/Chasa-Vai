@@ -7,12 +7,15 @@ import useAdmin from "../../hooks/useAdmin";
 import useFarmer from "../../hooks/useFarmer";
 import { toast } from "react-toastify";
 import useFarmerReq from "../../hooks/useFarmerReq";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const BeFarmerForm = () => {
   const axiosSecure = useAxiosSecure();
   const { user } = useAuth();
   const [isAdmin] = useAdmin();
   const [isFarmer] = useFarmer();
+  const navigate = useNavigate();
+  const location = useLocation();
   const {
     register,
     handleSubmit,
@@ -80,6 +83,24 @@ const BeFarmerForm = () => {
           <p className="text-xl   text-center">
             You are not eligible for the application
           </p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div className=" min-h-[50vh] flex justify-center items-center">
+        <div>
+          <h1 className="text-3xl mb-2 text-center">
+            Your are not a register user. Please Login first.
+          </h1>
+          <p className="text-xl   text-center">
+            You are not eligible for the application before login.
+          </p>
+          <button onClick={()=>{navigate("/login", {state: location.pathname})}} className="mt-5 btn text-white bg-gradient-to-r from-pink-500 to-pink-700 space-y-5 md:space-y-10 w-full">
+            Login
+          </button>
         </div>
       </div>
     );
